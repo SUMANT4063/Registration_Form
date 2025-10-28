@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f2f2f2; margin: 0; padding: 0;">
+
+  <h2 style="text-align: center; color: #333; padding-top: 20px;">My Profile</h2>
+
+  <form action="/submit" method="post"
+        style="background-color: #fff; max-width: 750px; margin: 30px auto; padding: 25px;
+               border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+
+    <!-- First Name and Last Name -->
+    <div style="display: flex; gap: 40px; margin-bottom: 20px;">
+      <div style="flex: 1;">
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname" required
+               style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+      </div>
+      <div style="flex: 1;">
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" name="lname" required
+               style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+      </div>
+    </div>
+
+    <!-- Date of Birth and Gender -->
+    <div style="display: flex; gap: 40px; margin-bottom: 20px;">
+      <div style="flex: 1;">
+        <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob"
+               style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+      </div>
+      <div style="flex: 1;">
+        <label for="gender">Gender:</label><br>
+        <select id="gender" name="gender"
+                style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+          <option value="">Select</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Email and Phone -->
+    <div style="display: flex; gap: 40px; margin-bottom: 20px;">
+      <div style="flex: 1;">
+        <label for="email">Email ID:</label><br>
+        <input type="email" id="email" name="email" placeholder="example@gmail.com" required
+               style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+      </div>
+      <div style="flex: 1;">
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890"
+               style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+      </div>
+    </div>
+
+    <!-- Qualification and Branch -->
+    <div style="display: flex; gap: 40px; margin-bottom: 20px;">
+      <div style="flex: 1;">
+        <label for="qualification">Qualification:</label><br>
+        <select id="qualification" name="qualification"
+                style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+          <option>Select</option>
+          <option>B.E/B.Tech</option>
+          <option>B.Com</option>
+          <option>B.Sc</option>
+          <option>B.A</option>
+        </select>
+      </div>
+      <div style="flex: 1;">
+        <label for="branch">Branch:</label><br>
+        <select id="branch" name="branch"
+                style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+          <option>Select</option>
+          <option>Accounts</option>
+          <option>Computer Science</option>
+          <option>Plant Biology</option>
+          <option>ECE</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Father Info -->
+    <div style="display: flex; gap: 40px; margin-bottom: 20px;">
+      <div style="flex: 1;">
+        <label for="fatherName">Father Name:</label><br>
+        <input type="text" id="fatherName" name="fatherName"
+               style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+      </div>
+      <div style="flex: 1;">
+        <label for="fatherPhone">Father Phone Number:</label><br>
+        <input type="tel" id="fatherPhone" name="fatherPhone" pattern="[0-9]{10}" placeholder="1234567890"
+               style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+      </div>
+    </div>
+
+    <!-- Mother Info -->
+    <div style="display: flex; gap: 40px; margin-bottom: 20px;">
+      <div style="flex: 1;">
+        <label for="motherName">Mother Name:</label><br>
+        <input type="text" id="motherName" name="motherName"
+               style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+      </div>
+      <div style="flex: 1;">
+        <label for="motherPhone">Mother Phone Number:</label><br>
+        <input type="tel" id="motherPhone" name="motherPhone" pattern="[0-9]{10}" placeholder="1234567890"
+               style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+      </div>
+    </div>
+
+    <!-- Address -->
+    <div style="margin-bottom: 20px;">
+      <label for="address">Address:</label><br>
+      <textarea id="address" name="address" rows="3"
+                style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+    </div>
+
+    <!-- District -->
+    <div style="margin-bottom: 20px;">
+      <label for="district">District:</label><br>
+      <select id="district" name="district"
+              style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+        <option>Select</option>
+        <option>Chennai</option>
+        <option>Thiruvallur</option>
+        <option>Kanchipuram</option>
+        <option>Chengalpattu</option>
+      </select>
+    </div>
+
+    <!-- State -->
+    <div style="margin-bottom: 20px;">
+      <label for="state">State:</label><br>
+      <select id="state" name="state"
+              style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+        <option>Select</option>
+        <option>Tamil Nadu</option>
+        <option>Andhra Pradesh</option>
+        <option>Kerala</option>
+        <option>Noida</option>
+        <option>Gujarat</option>
+      </select>
+    </div>
+
+    <!-- Country -->
+    <div style="margin-bottom: 20px;">
+      <label for="country">Country:</label><br>
+      <select id="country" name="country"
+              style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+        <option>Select</option>
+        <option>India</option>
+        <option>UK</option>
+        <option>US</option>
+        <option>Singapore</option>
+        <option>Canada</option>
+      </select>
+    </div>
+
+    <!-- Material Status -->
+    <div style="margin-bottom: 20px;">
+      <label for="material">Marital Status:</label><br>
+      <select id="material" name="material"
+              style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+        <option>Select</option>
+        <option>Single</option>
+        <option>Married</option>
+        <option>Divorced</option>
+      </select>
+    </div>
+
+    <!-- Siblings, Wife, Children -->
+    <div style="margin-bottom: 20px;">
+      <label for="siblings">Sibling's Names:</label><br>
+      <input type="text" id="siblings" name="siblings" placeholder="If have or NA"
+             style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <label for="wife">Wife Name:</label><br>
+      <input type="text" id="wife" name="wife" placeholder="If married or NA"
+             style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <label for="children">Children's Names:</label><br>
+      <input type="text" id="children" name="children" placeholder="If have or NA"
+             style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+    </div>
+
+    <!-- Terms -->
+    <div style="margin-bottom: 20px;">
+      <input type="checkbox" id="terms" name="terms" required>
+      <label for="terms">I agree to the terms and conditions</label>
+    </div>
+
+    <!-- Buttons -->
+    <div style="text-align: center;">
+      <input type="submit" value="Register"
+             style="background-color: #4CAF50; color: white; padding: 10px 25px;
+                    border: none; border-radius: 4px; cursor: pointer;">
+      <input type="reset" value="Reset"
+             style="background-color: #f44336; color: white; padding: 10px 25px;
+                    border: none; border-radius: 4px; cursor: pointer; margin-left: 15px;">
+    </div>
+  </form>
+
+</body>
+</html>
